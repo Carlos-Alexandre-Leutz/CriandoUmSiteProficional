@@ -4,22 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Solicitar Autenticação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 </head>
 
-<body style="text-align: center;">
-    <h1>Digite seu melhor email(Valido) ele vai ser a sua antenticação</h1>
-    <form method="post" enctype="multipart/form-data" action="https://30.e-goi.com//w/1e3e1P6Xe6BAtUHsM2e5042c-4d">
-        <input type="hidden" name="lista" value="1">
-        <input type="hidden" name="cliente" value="392817">
-        <input type="hidden" name="lang" id="lang_id" value="br">
-        <input type="hidden" name="formid" id="formid" value="3">
-        <label for="email_6" easylabel="E-mail">
-      E-mail  * 
-    </label>
-        <input type="email" name="email_6" id="email_6" value="">
-        <input type="submit" value="submit">
-    </form>
+<body>
+
+
+
+    <div id="myModal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4>Digite seu melhor email(Valido) </h1>
+
+                </div>
+                <div class="modal-body">
+                    <label for="">
+                        Clique em Autenticar para receber a autenticação.
+
+                        
+                    </label>
+                    <br>
+
+                    <form method="post" enctype="multipart/form-data" action="https://30.e-goi.com//w/1e3e1P6Xe6BAtUHsM2e5042c-4d">
+                        <input type="hidden" name="lista" value="1">
+                        <input type="hidden" name="cliente" value="392817">
+                        <input type="hidden" name="lang" id="lang_id" value="br">
+                        <input type="hidden" name="formid" id="formid" value="3">
+                        <div class="input-group">
+
+                            <label class="input-group-text" for="email_6" easylabel="E-mail">
+                                E-mail 
+                            </label>
+
+                            <input class="form-control" type="email" name="email_6" required id="email_6" value="">
+                        </div>
+                        <small>
+                            Você  recebera um e-mail com os links de acesso eternos ao curço.
+                       </small>
+
+
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Autenticar" class="btn btn-primary">
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js " integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin=" anonymous "></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js "></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#myModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            })
+        });
+    </script>
+
 </body>
 
 </html>
