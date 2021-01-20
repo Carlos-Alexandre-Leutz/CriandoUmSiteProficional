@@ -34,12 +34,11 @@
 
                     <!--
 
-                    <video style="max-width: 60%; " controls="controls " class="soNoDescktop videod " playsinline="playsinline " loop="loop "><!--autoplay="autoplay "-->
+                    <video style="max-width: 60%; " controls="controls " class="soNoDescktop videod " playsinline="playsinline " loop="loop ">autoplay="autoplay "-->
                     <source src="assets/ebook cria pagina .mp4 " type="video/mp4 ">
                     <source src="assets/ebook cria pagina .mp4 " type="video/mp4 ">
                     </video>
 
-                    -->
                 </div>
                 <a class="btn btn-primary js-scroll-trigger mt-2 " target="blank " href="https://www.youtube.com/channel/UCd4MhWhSeqK1Ga4OKOPSxSw?view_as=subscriber">Inscreva-se <i class="fab fa-youtube"></i></a>
 
@@ -51,7 +50,7 @@
         </div>
 
     </header>
-
+    <div id="IfDonwloadDiv"> </div>
 
 
     <section class="projects-section bg-light " id="projects ">
@@ -154,6 +153,11 @@
                                     Para fazer o download de graça
                                     <br>
                                     <a id="baixar" class="btn btn-primary js-scroll-trigger mt-2 " href="/Formula para criar e monetizar sites.pdf" onclick="this.click()" download="Formula para criar e monetizar sites.pdf">Download Grátis <i class="fas fa-download"></i></a>
+                                    <br>
+                                    <a target="blank" href="Formula para criar e monetizar sites.pdf">
+                                        <small>Se não conseguir fazer download clique aqui</small>
+                                    </a>
+
                                     <!--
 
     <a class="btn btn-primary js-scroll-trigger mt-2 " target="blank " href="entregaEbook.html">Download Grátis <i class="fas fa-download"></i></a>
@@ -567,6 +571,8 @@
         </div>
     </section>
 -->
+
+
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50 ">
         <div class="container ">Copyright © Codigo Front End 2020</div>
@@ -640,12 +646,20 @@
                 iconDonwload.innerHTML = '<img src="donwload.png" alt="">';
                 $("#baixar").click();
                 localStorage.setItem("jaBaixouOEbook", "accept");
+                let IfDonwloadDiv = document.getElementById('IfDonwloadDiv');
+                IfDonwloadDiv.innerHTML = '<div class="text-center"><a class="btn btn-primary js-scroll-trigger mt-2 mb-2" target="blanc" href="Formula para criar e monetizar sites.pdf">se o download não começar clique aqui</a></div>';
+
+                let IfDonwloadDiv = document.getElementById('IfDonwloadDiv');
+                IfDonwloadDiv.innerHTML = '<div class="text-center"><a class="btn btn-primary js-scroll-trigger mt-2 mb-2" target="blanc" href="Formula para criar e monetizar sites.pdf">download não começar clique aqui</a></div>';
 
 
 
 
             } else if (localStorage.jaBaixouOEbook) {
                 let donwload = document.getElementById('donwload');
+
+
+
                 donwload.innerHTML = 'Faça o Donwload Novamente quando Quiser!'
             }
         }
