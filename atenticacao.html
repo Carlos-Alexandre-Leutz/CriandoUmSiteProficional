@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autentucação</title>
+</head>
+
+<body>
+
+    <div id="texto"></div>
+    <div id="link"></div>
+    clique no link ou aguarte segundos para ser redirecionado // abrir o curso em uma nova pagina e colocar o vidio do curso com botão nessa pagina
+
+
+    <script>
+        localStorage.setItem("AutenticacaoCanalCodigoFrontEnd", "accept");
+        let texto = document.getElementById('texto');
+        let link = document.getElementById('link');
+
+        if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
+            texto.innerHTML = 'Alguma coisa se perdeu! recaregue a pagina para se autenticar'
+
+        } else {
+            texto.innerHTML = 'Parabens você foi autenticado';
+            link.innerHTML = '<a href="/index.html">ir</a>';
+        }
+    </script>
+</body>
+
+</html>

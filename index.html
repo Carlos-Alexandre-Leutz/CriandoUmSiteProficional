@@ -147,13 +147,17 @@
                         <div class="d-flex h-100 ">
                             <div class="project-text w-100 my-auto text-center text-lg-right ">
                                 <h4 class="text-white ">
-                                    AINDA NÃO FEZ O DONWLOAD DE GRASA DO <br> FORMULA PARA CIRAR E MONETIZAR SITES?
+                                    <span id="donwload">AINDA NÃO FEZ O DONWLOAD DE GRASA DO <br> FORMULA PARA CIRAR E MONETIZAR SITES?</span>
                                     <i class="fas fa-code"></i>
                                 </h4>
                                 <p class="mb-0 text-white-50 ">
                                     Para fazer o download de graça
                                     <br>
-                                    <a class="btn btn-primary js-scroll-trigger mt-2 " target="blank " href="entregaEbook.html">Download Grátis <i class="fas fa-download"></i></i></i></a>
+                                    <a id="baixar" class="btn btn-primary js-scroll-trigger mt-2 " href="/Formula para criar e monetizar sites.pdf" onclick="this.click()" download="Formula para criar e monetizar sites.pdf">Download Grátis <i class="fas fa-download"></i></a>
+                                    <!--
+
+    <a class="btn btn-primary js-scroll-trigger mt-2 " target="blank " href="entregaEbook.html">Download Grátis <i class="fas fa-download"></i></a>
+-->
 
 
                                 </p>
@@ -427,6 +431,9 @@
         </div>
 
     </section>
+    <div style="position: fixed; left: 10px; bottom: 0px;" id="iconDonwload">
+    </div>
+
     <!-- About-->
 
 
@@ -603,7 +610,29 @@
         setInterval(function() {
             document.getElementById('responsecss').innerHTML = '';
         }, 5000);
+
+        if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
+            alert('primeira fez por aqui autentiquese para ter acesso ao conteudo')
+            window.location.href = window.location.origin + ("/atenticacao.html")
+        } else if (localStorage.AutenticacaoCanalCodigoFrontEnd) {
+            if (!localStorage.jaBaixouOEbook) {
+
+                let iconDonwload = document.getElementById('iconDonwload');
+                iconDonwload.innerHTML = '<img src="donwload.png" alt="">';
+                $("#baixar").click();
+                localStorage.setItem("jaBaixouOEbook", "accept");
+
+
+
+
+            } else if (localStorage.jaBaixouOEbook) {
+                let donwload = document.getElementById('donwload');
+                donwload.innerHTML = 'Faça o Donwload Novamente quando Quiser!'
+            }
+        }
     </script>
+
+
 </body>
 
 </html>
