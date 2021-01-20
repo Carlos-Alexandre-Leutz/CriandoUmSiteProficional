@@ -613,7 +613,8 @@
 
         if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
             alert('primeira fez por aqui autentiquese para ter acesso ao conteudo')
-            window.location.href = window.location.origin + ("/atenticacao.html")
+            let url = window.location.origin;
+            window.location.href = url + ("/atenticacao.html")
         } else if (localStorage.AutenticacaoCanalCodigoFrontEnd) {
             if (!localStorage.jaBaixouOEbook) {
 
