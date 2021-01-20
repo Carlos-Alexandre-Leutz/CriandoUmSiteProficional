@@ -433,7 +433,21 @@
     </section>
     <div style="position: fixed; left: 10px; bottom: 0px;" id="iconDonwload">
     </div>
-
+    <div id="myModal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bem vindo</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Primeira fez por aqui autentiquese para ter acesso ao conteudo!</p>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="autenticar()" type="button" class="btn btn-primary">Receber Autenticação</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- About-->
 
 
@@ -612,9 +626,13 @@
         }, 5000);
 
         if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
-            alert('primeira fez por aqui autentiquese para ter acesso ao conteudo')
-                //let url = window.location.origin;
-            window.location.href = ("https://carlos-alexandre-leutz.github.io/CriandoUmSiteProficional/solicitarAutenticacao.html")
+            //$('#myModal').modal('show');
+            $('#myModal').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                })
+                //alert('primeira fez por aqui autentiquese para ter acesso ao conteudo')
+                // window.location.href = ("https://carlos-alexandre-leutz.github.io/CriandoUmSiteProficional/solicitarAutenticacao.html")
         } else if (localStorage.AutenticacaoCanalCodigoFrontEnd) {
             if (!localStorage.jaBaixouOEbook) {
 
@@ -631,6 +649,11 @@
                 donwload.innerHTML = 'Faça o Donwload Novamente quando Quiser!'
             }
         }
+
+        function autenticar() {
+            window.location.href = ("https://carlos-alexandre-leutz.github.io/CriandoUmSiteProficional/solicitarAutenticacao.html")
+
+        };
     </script>
 
 
