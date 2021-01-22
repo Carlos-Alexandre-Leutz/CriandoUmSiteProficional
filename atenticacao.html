@@ -58,7 +58,17 @@
             })
 
             texto.innerHTML = 'Parabéns você foi autenticado';
-            link.innerHTML = 'Clique em continuar para voltar ao Curso<br> O Donwload do material vai começar automaticamente!';
+
+            var windowWidth = window.innerWidth;
+            var screenWidth = screen.width;
+
+            if (windowWidth <= 768 || screenWidth <= 768) {
+                link.innerHTML = 'Clique em continuar para voltar ao Curso<br> Com Donwload do conteúdo';
+
+            } else {
+
+                link.innerHTML = 'Clique em continuar para voltar ao Curso<br> O Donwload do material vai começar automaticamente!';
+            }
 
         }
 
