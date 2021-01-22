@@ -120,7 +120,7 @@
                     <div class="project-text w-100 my-auto text-center text-lg-left ">
                         <h4>Download Visual Studio Code <i class="fas fa-code"></i> </h4>
                         <p class="mb-0">
-                            Se você ainda não fez o Download do Editor de texto
+                            Se você ainda não vez o Download do Editor de texto
                             <a target="blank" href="https://code.visualstudio.com/download"> 
                             clique aqui para baixar
                         </a>
@@ -445,7 +445,7 @@
                 <div class="modal-footer">
                     <a target="black" href="solicitarAutenticacao.html">
 
-                        <button type="button" class="btn btn-primary">Receber Autenticação</button>
+                        <button onclick="redirecYoutube()" type="button" class="btn btn-primary">Receber Autenticação</button>
                     </a>
                 </div>
             </div>
@@ -547,6 +547,12 @@
                 let donwload = document.getElementById('donwload');
                 donwload.innerHTML = 'Faça o Donwload Novamente quando Quiser!'
             }
+        }
+
+        function redirecYoutube() {
+            setTimeout(function() {
+                window.location.href = ('https://www.youtube.com/channel/UCd4MhWhSeqK1Ga4OKOPSxSw?sub_confirmation=1');
+            }, 3000);
         }
     </script>
 
