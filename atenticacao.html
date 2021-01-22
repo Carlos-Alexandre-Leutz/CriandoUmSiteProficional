@@ -23,7 +23,7 @@
                     <div id="link"></div>
                 </div>
                 <div class="modal-footer">
-                    <a target="blak" href="/entregaEbook.html">
+                    <a target="blank" href="/entregaEbook.html">
                         <button onclick="curso ()" type="button" class="btn btn-primary">Continuar</button>
                     </a>
                 </div>
@@ -62,10 +62,17 @@
 
         }
 
-        function curso() {
-            window.location.href = ('https://go.hotmart.com/C43980931F')
 
-        };
+
+
+        function curso() {
+            setTimeout(function() {
+                window.location.href = ('https://go.hotmart.com/C43980931F');
+            }, 3000);
+        }
+
+
+
         /*
         caregar a pagina do produto abaixo do aviso de autenticacao 
         avizando que foi autenticado os dados de aceso foram mandados para seu email
