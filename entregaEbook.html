@@ -2,6 +2,48 @@
 <html lang="pt">
 
 <head>
+    <script>
+        if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
+            //$('#myModal').modal('show');
+
+            // $('#myModal').modal({
+            //     backdrop: 'static',
+            //     keyboard: false
+            // })
+
+            //alert('primeira fez por aqui autentiquese para ter acesso ao conteudo')
+            window.location.href = ("https://carlos-alexandre-leutz.github.io/Cursos-codigo-front-end/")
+        } else if (localStorage.AutenticacaoCanalCodigoFrontEnd) {
+            if (!localStorage.jaBaixouOEbook) {
+
+
+                var windowWidth = window.innerWidth;
+                var screenWidth = screen.width;
+
+                if (windowWidth <= 768 || screenWidth <= 768) {
+                    let iconDonwload = document.getElementById('iconDonwload');
+                    iconDonwload.innerHTML = '<img src="donwload.png" alt="">';
+                    let linkDonloadMovel = '<a target="blank" class="btn btn-danger js-scroll-trigger mb-2 " href="Formula para criar e monetizar sites.pdf">Download Grátis<i class="fas fa-download"></i></a>';
+                    iconDonwload.innerHTML = linkDonloadMovel;
+                    // $("#pdfdownload").click();
+
+
+                } else {
+                    let iconDonwload = document.getElementById('iconDonwload');
+                    iconDonwload.innerHTML = '<img src="donwload.png" alt="">';
+                    $("#baixar").click();
+
+                }
+                localStorage.setItem("jaBaixouOEbook", "accept");
+
+
+
+            } else if (localStorage.jaBaixouOEbook) {
+                let donwload = document.getElementById('donwload');
+                donwload.innerHTML = 'Faça o Donwload Novamente quando Quiser!'
+            }
+        }
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
