@@ -10,7 +10,7 @@
 
 <body style="text-align: center;">
 
-    <div id="myModal" class="modal" tabindex="-1">
+    <!-- <div id="myModal" class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -33,7 +33,7 @@
 
 
 
-    <a id="curso" href="https://go.hotmart.com/C43980931F" target="_blank"></a>
+    <a id="curso" href="https://go.hotmart.com/C43980931F" target="_blank"></a> -->
     <!--
         abrir o curso em uma nova pagina e colocar o vidio do curso com botão nessa pagina
 
@@ -43,35 +43,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js "></script>
     <script>
-        localStorage.setItem("AutenticacaoCanalCodigoFrontEnd", "accept");
-        let texto = document.getElementById('texto');
-        let link = document.getElementById('link');
+        // localStorage.setItem("AutenticacaoCanalCodigoFrontEnd", "accept");
+        // let texto = document.getElementById('texto');
+        // let link = document.getElementById('link');
 
+        // if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
+        //     texto.innerHTML = 'Alguma coisa se perdeu! recaregue a pagina para se autenticar'
+
+        // } else {
+
+        //     $('#myModal').modal({
+        //         backdrop: 'static',
+        //         keyboard: false
+        //     })
+
+        //     texto.innerHTML = 'Parabéns você foi autenticado';
+
+        //     var windowWidth = window.innerWidth;
+        //     var screenWidth = screen.width;
+
+        //     if (windowWidth <= 768 || screenWidth <= 768) {
+        //         link.innerHTML = 'Clique em continuar para voltar ao Curso<br> Com Donwload do conteúdo';
+
+        //     } else {
+
+        //         link.innerHTML = 'Clique em continuar para voltar ao Curso<br> O Donwload do material vai começar automaticamente!';
+        //     }
+
+        // }
         if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
-            texto.innerHTML = 'Alguma coisa se perdeu! recaregue a pagina para se autenticar'
+            window.location.href = ("https://carlos-alexandre-leutz.github.io/Cursos-codigo-front-end/")
 
         } else {
-
-            $('#myModal').modal({
-                backdrop: 'static',
-                keyboard: false
-            })
-
-            texto.innerHTML = 'Parabéns você foi autenticado';
-
-            var windowWidth = window.innerWidth;
-            var screenWidth = screen.width;
-
-            if (windowWidth <= 768 || screenWidth <= 768) {
-                link.innerHTML = 'Clique em continuar para voltar ao Curso<br> Com Donwload do conteúdo';
-
-            } else {
-
-                link.innerHTML = 'Clique em continuar para voltar ao Curso<br> O Donwload do material vai começar automaticamente!';
-            }
+            window.location.href = ("entregaEbook.html")
 
         }
-
 
 
 
@@ -102,5 +108,7 @@
         */
     </script>
 </body>
+
+</html>
 
 </html>

@@ -564,7 +564,7 @@
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js "></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js "></script>
+    <!-- <script src="js/scripts.js "></script> -->
 
 
     <script>
@@ -612,9 +612,9 @@
         }, 5000);
 
         if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
-            alert('primeira fez por aqui autentiquese para ter acesso ao conteudo')
-            let url = window.location.origin;
+
             window.location.href = url + ("/atenticacao.html")
+
         } else if (localStorage.AutenticacaoCanalCodigoFrontEnd) {
             if (!localStorage.jaBaixouOEbook) {
 
@@ -631,6 +631,28 @@
                 donwload.innerHTML = 'Faça o Donwload Novamente quando Quiser!'
             }
         }
+
+
+        // if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
+        //     alert('primeira fez por aqui autentiquese para ter acesso ao conteudo')
+        //     let url = window.location.origin;
+        //     window.location.href = url + ("/atenticacao.html")
+        // } else if (localStorage.AutenticacaoCanalCodigoFrontEnd) {
+        //     if (!localStorage.jaBaixouOEbook) {
+
+        //         let iconDonwload = document.getElementById('iconDonwload');
+        //         iconDonwload.innerHTML = '<img src="donwload.png" alt="">';
+        //         $("#baixar").click();
+        //         localStorage.setItem("jaBaixouOEbook", "accept");
+
+
+
+
+        //     } else if (localStorage.jaBaixouOEbook) {
+        //         let donwload = document.getElementById('donwload');
+        //         donwload.innerHTML = 'Faça o Donwload Novamente quando Quiser!'
+        //     }
+        // }
     </script>
 
 
