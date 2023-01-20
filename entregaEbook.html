@@ -605,11 +605,11 @@
             document.getElementById('responsecss').innerHTML = '';
         }, 5000);
 
-        // if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
+         if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
 
-        //     // window.location.href = url + ("/atenticacao.html")
+            // window.location.href = url + ("/atenticacao.html")
 
-        // } else if (localStorage.AutenticacaoCanalCodigoFrontEnd) {
+         } else if (localStorage.AutenticacaoCanalCodigoFrontEnd) {
         if (!localStorage.jaBaixouOEbook) {
 
             let iconDonwload = document.getElementById('iconDonwload');
@@ -624,29 +624,28 @@
             let donwload = document.getElementById('donwload');
             donwload.innerHTML = 'Faça o Donwload Novamente quando Quiser!'
         }
-        // }
+         }
+
+        if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
+             alert('primeira fez por aqui autentiquese para ter acesso ao conteudo')
+             let url = window.location.origin;
+             window.location.href = url + ("/atenticacao.html")
+         } else if (localStorage.AutenticacaoCanalCodigoFrontEnd) {
+             if (!localStorage.jaBaixouOEbook) {
+
+                 let iconDonwload = document.getElementById('iconDonwload');
+                 iconDonwload.innerHTML = '<img src="donwload.png" alt="">';
+                 $("#baixar").click();
+                 localStorage.setItem("jaBaixouOEbook", "accept");
 
 
-        // if (!localStorage.AutenticacaoCanalCodigoFrontEnd) {
-        //     alert('primeira fez por aqui autentiquese para ter acesso ao conteudo')
-        //     let url = window.location.origin;
-        //     window.location.href = url + ("/atenticacao.html")
-        // } else if (localStorage.AutenticacaoCanalCodigoFrontEnd) {
-        //     if (!localStorage.jaBaixouOEbook) {
-
-        //         let iconDonwload = document.getElementById('iconDonwload');
-        //         iconDonwload.innerHTML = '<img src="donwload.png" alt="">';
-        //         $("#baixar").click();
-        //         localStorage.setItem("jaBaixouOEbook", "accept");
 
 
-
-
-        //     } else if (localStorage.jaBaixouOEbook) {
-        //         let donwload = document.getElementById('donwload');
-        //         donwload.innerHTML = 'Faça o Donwload Novamente quando Quiser!'
-        //     }
-        // }
+             } else if (localStorage.jaBaixouOEbook) {
+                 let donwload = document.getElementById('donwload');
+                 donwload.innerHTML = 'Faça o Donwload Novamente quando Quiser!'
+             }
+         }
     </script>
 
 
